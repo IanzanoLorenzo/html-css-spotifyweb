@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+/* upgrade */
+
+#upgrade{
+    width: calc(100% - 200px);
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 200px;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#upgrade button{
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    background-color: unset;
+    border: solid white 1px;
+    margin-right: 20px;
+}
+
+/* sidebar */
+
+#sidebar{
+    position: fixed;
+    height: calc(100% - 100px);
+    left: 0;
+    top: 0;
+    width: 200px;
+    background-color: black;
+    z-index: 15;
+    color: gray;
+}
+
+#sidebar .padding-left{
+    padding: 5px 20px;
+}
+
+#sidebar .logo{
+    width: calc(200px - 30px);
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar .menu .content:first-child{
+    padding-left: 17px;
+    border-left: 3px solid greenyellow;
+}
+
+#logo-small{
+    display: none;
+}
+
+.col.menu .content{
+    display: flex;
+    align-items: center;
+}
+
+.col.menu .content.padding-left:hover{
+    color: white;
+}
+
+.col.menu .content-right{
+    width: calc(60% - 30px);
+}
+
+.col.menu .content-left{
+    width: 15%;
+    margin-right: 7px;
+}
+
+
+
+/* main */
+
+main{
+    background-color: #141922;
+    width: calc(100% - 200px);
+    height: 100vh;
+    position: relative;
+    left: 200px;
+}
+
+/* footer */
+
+#player{
+    height: 100px;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+/****************  
+laptop
+****************/
+
+
+
+/****************  
+tablet
+****************/
+
+
+
+/****************
+telefono 
+****************/
+
+@media screen and (max-width: 767px) {
+
+    /* sidebar */
+
+    #sidebar{
+        width: 50px;
+        padding: 0 10px;
+    }
+
+    #sidebar .logo{
+        width: 40px;
+        height: 50px;
+    }
+
+    #logo-grande{
+        display: none;
+    }
+
+    #logo-small{
+        display: inline-block;
+        max-width: 25px;
+    }
+
+    /* upgrade */
+
+    #upgrade, main{
+        width: calc(100% - 50px);
+        left: 50px;
+    }
+
+}
