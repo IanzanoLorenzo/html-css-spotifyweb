@@ -12,7 +12,7 @@ body{
 
 #upgrade{
     width: calc(100% - 200px);
-    height: 100px;
+    height: 80px;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     left: 200px;
@@ -48,17 +48,21 @@ body{
 }
 
 #sidebar .padding-left{
-    padding: 5px 20px;
+    padding: 10px 20px;
 }
+
+/* sidebar logo */
 
 #sidebar .logo{
     width: calc(200px - 30px);
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
 }
 
-#sidebar .menu .content:first-child{
+/* sidebar menu */
+
+#menu .content:first-child{
     padding-left: 17px;
     border-left: 3px solid greenyellow;
 }
@@ -67,22 +71,60 @@ body{
     display: none;
 }
 
-.col.menu .content{
+#menu{
+    padding-bottom: 25px;
+}
+
+#menu .content{
     display: flex;
     align-items: center;
 }
 
-.col.menu .content.padding-left:hover{
+#menu .content.padding-left:hover{
     color: white;
 }
 
-.col.menu .content-right{
+#menu .content-right{
     width: calc(60% - 30px);
 }
 
-.col.menu .content-left{
+#menu .content-left{
     width: 15%;
     margin-right: 7px;
+}
+
+/* sidebar playlists */
+
+#playlists{
+    max-height: 50vh;
+    min-height: 5vh;
+    overflow: auto;
+}
+
+#playlists h4{
+    color: white;
+}
+
+#playlists .content{
+    display: flex;
+    align-items: center;
+}
+
+#add-playlist{
+    color: black;
+    background-color: gray;
+    width: 30px;
+    height: 30px;
+    margin: 5px 0px 5px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#playlists .content h5{
+    padding-left: 7px;
 }
 
 
@@ -131,11 +173,14 @@ telefono
 
     #sidebar{
         width: 50px;
-        padding: 0 10px;
+    }
+
+    #sidebar .padding-left{
+        padding: 5px 10px;
     }
 
     #sidebar .logo{
-        width: 40px;
+        width: 50px;
         height: 50px;
     }
 
@@ -153,6 +198,21 @@ telefono
     #upgrade, main{
         width: calc(100% - 50px);
         left: 50px;
+    }
+
+    #menu .content-left{
+        width: calc(100%);
+        margin-right: 0;
+        padding: 1px 4px 1px 0;
+    }
+
+    .content-right{
+        display:none
+    }
+
+    #menu .content:first-child{
+        padding-left: 10px;
+        border-left: none;
     }
 
 }
